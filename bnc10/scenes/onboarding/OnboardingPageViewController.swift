@@ -50,13 +50,14 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     
     // MARK: Dots
     func configurePageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 50,width: UIScreen.main.bounds.width,height: 50))
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 220,width: UIScreen.main.bounds.width,height: 50))
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
-        self.pageControl.alpha = 0.5
-        self.pageControl.tintColor = UIColor.black
-        self.pageControl.pageIndicatorTintColor = UIColor.white
-        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.pageControl.alpha = 1
+        self.pageControl.tintColor = UIColor.white
+        self.pageControl.pageIndicatorTintColor = UIColor(red: 0.258823, green: 0.749019, blue: 0.956862, alpha: 0.5)
+        self.pageControl.currentPageIndicatorTintColor = UIColor(red: 0.258823, green: 0.749019, blue: 0.956862, alpha: 1)
+        self.pageControl.transform = CGAffineTransform(scaleX: 1.8, y: 1.8);
         self.view.addSubview(pageControl)
     }
     
@@ -73,11 +74,12 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
         
         
-        
+        /*
+        // Page control in container
         if let firstViewController = viewControllers?.first,
             let index = orderedViewControllers.index(of: firstViewController) {
             onboardingDelegate?.onboardingPageViewController(onboardingPageViewController: self, didUpdatePageIndex: index)
-        }
+        }*/
     }
     
     
