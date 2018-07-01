@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */; };
+		AB63D81920E9090600343EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB63D81B20E9090600343EC0 /* Localizable.strings */; };
 		ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */; };
 		ABE4CA5820E66500005185C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE4CA5720E66500005185C7 /* AppDelegate.swift */; };
 		ABE4CA5D20E66500005185C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE4CA5B20E66500005185C7 /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageFirstViewController.swift; sourceTree = "<group>"; };
+		AB63D81A20E9090600343EC0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB63D81C20E9090A00343EC0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB63D81D20E909A000343EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ABE4CA5420E66500005185C7 /* bnc10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bnc10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE4CA5720E66500005185C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB63D81420E8F34C00343EC0 /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
 		ABE4CA4B20E66500005185C7 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +80,7 @@
 				ABE4CA5E20E66502005185C7 /* Assets.xcassets */,
 				ABE4CA6020E66502005185C7 /* LaunchScreen.storyboard */,
 				ABE4CA6320E66502005185C7 /* Info.plist */,
+				AB63D81B20E9090600343EC0 /* Localizable.strings */,
 			);
 			path = bnc10;
 			sourceTree = "<group>";
@@ -81,6 +96,7 @@
 		ABE4CA6C20E66A8F005185C7 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				AB63D81420E8F34C00343EC0 /* pages */,
 				ABE4CA6A20E66A8A005185C7 /* OnboardingPageViewController.swift */,
 				ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */,
 			);
@@ -128,6 +144,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
+				ca,
 			);
 			mainGroup = ABE4CA4B20E66500005185C7;
 			productRefGroup = ABE4CA5520E66500005185C7 /* Products */;
@@ -145,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE4CA6220E66502005185C7 /* LaunchScreen.storyboard in Resources */,
+				AB63D81920E9090600343EC0 /* Localizable.strings in Resources */,
 				ABE4CA5F20E66502005185C7 /* Assets.xcassets in Resources */,
 				ABE4CA5D20E66500005185C7 /* Main.storyboard in Resources */,
 			);
@@ -158,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE4CA6B20E66A8A005185C7 /* OnboardingPageViewController.swift in Sources */,
+				AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */,
 				ABE4CA5820E66500005185C7 /* AppDelegate.swift in Sources */,
 				ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */,
 			);
@@ -166,6 +185,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AB63D81B20E9090600343EC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB63D81A20E9090600343EC0 /* es */,
+				AB63D81C20E9090A00343EC0 /* ca */,
+				AB63D81D20E909A000343EC0 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ABE4CA5B20E66500005185C7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

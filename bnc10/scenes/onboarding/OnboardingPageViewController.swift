@@ -4,6 +4,20 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
     
     // MARK: Properties
     var pageControl = UIPageControl()
+    //var parentOnboardingViewController: OnboardingViewController? = nil
+    weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
+    
+    private(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [
+            self.getNewViewController(storyboardId: "onboardingPage0"),
+            self.getNewViewController(storyboardId: "onboardingPage1"),
+            self.getNewViewController(storyboardId: "onboardingPage2")
+        ]
+    }()
+    
+    private func getNewViewController(storyboardId: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:storyboardId)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +31,16 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         }
         
         self.delegate = self
+        
+        onboardingDelegate?.onboardingPageViewController(onboardingPageViewController: self, didUpdatePageCount: orderedViewControllers.count)
+
+        //parentOnboardingViewController = self.parent as? OnboardingViewController
+        
+        //parentOnboardingViewController?.printSome(msg: "hello")
+        
         configurePageControl()
+        
+        // setViewControllers([orderedViewControllers[2]], direction: .forward, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,11 +60,26 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         self.view.addSubview(pageControl)
     }
     
+    // MARK: Scroll to next or previous
+    /*func scrollToNextViewController() {
+        if let visibleViewController = viewControllers?.first, let nextViewController = pageViewController?.
+    }*/
+    
     // MARK: Delegate functions
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
+        //let currentPage = orderedViewControllers.index(of: pageContentViewController)
+        //self.parentOnboardingViewController?.pageControl?.currentPage = (currentPage)!
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
+        
+        
+        
+        if let firstViewController = viewControllers?.first,
+            let index = orderedViewControllers.index(of: firstViewController) {
+            onboardingDelegate?.onboardingPageViewController(onboardingPageViewController: self, didUpdatePageIndex: index)
+        }
     }
+    
     
     // MARK: UIPageViewControllerDataSource
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -81,28 +119,30 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDe
         return orderedViewControllers[nextIndex]
     }
 
-
-    
-    private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [
-            self.getNewViewController(storyboardId: "onboardingPage0"),
-            self.getNewViewController(storyboardId: "onboardingPage1"),
-            self.getNewViewController(storyboardId: "onboardingPage2")
-        ]
-    }()
-    
-    private func getNewViewController(storyboardId: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:storyboardId)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+protocol OnboardingPageViewControllerDelegate: class {
+    
+    /**
+     Called when the number of pages is updated.
+     
+     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter count: the total number of pages.
+     */
+    func onboardingPageViewController(onboardingPageViewController: OnboardingPageViewController, didUpdatePageCount count: Int)
+    
+    /**
+     Called when the current index is updated.
+     
+     - parameter tutorialPageViewController: the TutorialPageViewController instance
+     - parameter index: the index of the currently visible page.
+     */
+    func onboardingPageViewController(onboardingPageViewController: OnboardingPageViewController, didUpdatePageIndex index: Int)
+    
+}
+
+
+
+
+
+
