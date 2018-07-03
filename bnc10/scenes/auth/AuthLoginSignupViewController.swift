@@ -27,6 +27,11 @@ class AuthLoginSignupViewController: UIViewController {
     
 
     @IBAction func gotoLogin(_ sender: Any) {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authLoginInitialViewController") as? AuthLoginInitialViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
     }
     
     @IBAction func gotoSignup(_ sender: Any) {
