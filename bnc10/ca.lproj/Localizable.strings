@@ -10,3 +10,9 @@
 
 "auth-login-signup-button-login" = "Login";
 "auth-login-signup-button-crea-compte" = "Crea un nou compte";
+
+"auth-login-signup-step1-title" = "Crea el teu usuari a BNC10";
+"auth-login-signup-step1-field-name" = "Nom i cognoms";
+"auth-login-signup-step1-field-email" = "Correu electrònic";
+"auth-login-signup-step1-field-phone" = "Número de telèfon";
+"auth-login-signup-step1-button" = "Registre";

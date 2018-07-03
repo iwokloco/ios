@@ -1,4 +1,18 @@
 "onboarding-page-first-title" = "BIENVENIDO AL NEOBANKING";
 "onboarding-page-first-desc" = "En vez de regalarte un móvil, montar cajeros en cada esquina o hacer publicidad...";
+"onboarding-page-second-title" = "BIENVENIDO A  BNC10";
+"onboarding-page-second-desc" = "...t'oferim transferències gratuites i canvi de divises amb les comisions més baixes.";
+"onboarding-page-third-title" = "BIENVENIDO A BNC10";
+"onboarding-page-third-desc" = "Que nadie te diga cómo organizar tus ahorros. Toma el control con BNC10";
 "onboarding-page-button-continua" = "CONTINUA";
+"onboarding-page-button-continuemos" = "CONTINUEMOS";
 "onboarding-page-button-registre" = "Llévame al registro";
+
+"auth-login-signup-button-login" = "Login";
+"auth-login-signup-button-crea-compte" = "Crea una nueva cuenta";
+
+"auth-login-signup-step1-title" = "Crea tu usuario en BNC10";
+"auth-login-signup-step1-field-name" = "Nombre y apellidos";
+"auth-login-signup-step1-field-email" = "Correo electrónico";
+"auth-login-signup-step1-field-phone" = "Número de teléfono";
+"auth-login-signup-step1-button" = "Registro";

@@ -13,10 +13,12 @@ class AuthLoginSignupViewController: UIViewController {
     func setupButtons() {
         buttonLogin.layer.cornerRadius = 10
         buttonLogin.clipsToBounds = true
-        buttonLogin.backgroundColor = UIColor(red: 0.258823, green: 0.749019, blue: 0.956862, alpha: 1)
+        buttonLogin.backgroundColor = Colors.darkBlue
         buttonLogin.setTitleColor(.white, for: .normal)
         buttonLogin.setTitle(NSLocalizedString("auth-login-signup-button-login", comment: ""), for: .normal)
         buttonSignup.setTitle(NSLocalizedString("auth-login-signup-button-crea-compte", comment: ""), for: .normal)
+        
+        // buttonLogin.setGradientBackground(colorOne: Colors.darkBlue, colorTwo: Colors.lightBlue)
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,6 +30,11 @@ class AuthLoginSignupViewController: UIViewController {
     }
     
     @IBAction func gotoSignup(_ sender: Any) {
+        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authSignupStep1ViewController") as? AuthSignupStep1ViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
     }
     
 }

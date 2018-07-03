@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1BCFE820EAE35D00356C1A /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1BCFE720EAE35D00356C1A /* LocalAuthentication.framework */; };
+		AB1BCFEA20EAE3CD00356C1A /* AuthTouchIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCFE920EAE3CD00356C1A /* AuthTouchIDViewController.swift */; };
+		AB1BCFEC20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1BCFEB20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift */; };
 		AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */; };
 		AB63D81920E9090600343EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB63D81B20E9090600343EC0 /* Localizable.strings */; };
 		AB63D81F20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63D81E20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift */; };
+		AB90F60F20EA6267007A15BB /* AuthSignupStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */; };
+		AB90F61320EA64FC007A15BB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61220EA64FC007A15BB /* UIView+Extension.swift */; };
+		AB90F61520EA6557007A15BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61420EA6557007A15BB /* Constants.swift */; };
 		ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */; };
 		ABD373CD20E9A7A900246CE1 /* AuthLoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */; };
 		ABDAE19920E9525A008DB500 /* OnboardingPageThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE19820E9525A008DB500 /* OnboardingPageThirdViewController.swift */; };
@@ -22,11 +28,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1BCFE720EAE35D00356C1A /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		AB1BCFE920EAE3CD00356C1A /* AuthTouchIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTouchIDViewController.swift; sourceTree = "<group>"; };
+		AB1BCFEB20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupDNIFrontViewController.swift; sourceTree = "<group>"; };
 		AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageFirstViewController.swift; sourceTree = "<group>"; };
 		AB63D81A20E9090600343EC0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB63D81C20E9090A00343EC0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB63D81D20E909A000343EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB63D81E20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageSecondViewController.swift; sourceTree = "<group>"; };
+		AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupStep1ViewController.swift; sourceTree = "<group>"; };
+		AB90F61220EA64FC007A15BB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AB90F61420EA6557007A15BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginSignupViewController.swift; sourceTree = "<group>"; };
 		ABDAE19820E9525A008DB500 /* OnboardingPageThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageThirdViewController.swift; sourceTree = "<group>"; };
@@ -49,12 +61,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1BCFE820EAE35D00356C1A /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB1BCFE620EAE35D00356C1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB1BCFE720EAE35D00356C1A /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB63D81420E8F34C00343EC0 /* pages */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */,
+				AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */,
+				AB1BCFE920EAE3CD00356C1A /* AuthTouchIDViewController.swift */,
+				AB1BCFEB20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift */,
 			);
 			path = auth;
 			sourceTree = "<group>";
@@ -86,6 +110,7 @@
 			children = (
 				ABE4CA5620E66500005185C7 /* bnc10 */,
 				ABE4CA5520E66500005185C7 /* Products */,
+				AB1BCFE620EAE35D00356C1A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +132,8 @@
 				ABE4CA6020E66502005185C7 /* LaunchScreen.storyboard */,
 				ABE4CA6320E66502005185C7 /* Info.plist */,
 				AB63D81B20E9090600343EC0 /* Localizable.strings */,
+				AB90F61220EA64FC007A15BB /* UIView+Extension.swift */,
+				AB90F61420EA6557007A15BB /* Constants.swift */,
 			);
 			path = bnc10;
 			sourceTree = "<group>";
@@ -204,12 +231,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD373CD20E9A7A900246CE1 /* AuthLoginSignupViewController.swift in Sources */,
+				AB90F61520EA6557007A15BB /* Constants.swift in Sources */,
 				ABDAE19920E9525A008DB500 /* OnboardingPageThirdViewController.swift in Sources */,
 				ABE4CA6B20E66A8A005185C7 /* OnboardingPageViewController.swift in Sources */,
 				ABDAE19C20E95327008DB500 /* LoadViewController.swift in Sources */,
 				AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */,
 				ABE4CA5820E66500005185C7 /* AppDelegate.swift in Sources */,
+				AB1BCFEC20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift in Sources */,
+				AB1BCFEA20EAE3CD00356C1A /* AuthTouchIDViewController.swift in Sources */,
+				AB90F60F20EA6267007A15BB /* AuthSignupStep1ViewController.swift in Sources */,
 				ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */,
+				AB90F61320EA64FC007A15BB /* UIView+Extension.swift in Sources */,
 				AB63D81F20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
