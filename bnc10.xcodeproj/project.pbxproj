@@ -15,6 +15,10 @@
 		AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63D81520E8F38A00343EC0 /* OnboardingPageFirstViewController.swift */; };
 		AB63D81920E9090600343EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB63D81B20E9090600343EC0 /* Localizable.strings */; };
 		AB63D81F20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB63D81E20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift */; };
+		AB69F7A120EEB98200023A0E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB69F7A020EEB98200023A0E /* Alert.swift */; };
+		AB69F7A420EEE45A00023A0E /* AuthLoggedValidateSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB69F7A320EEE45A00023A0E /* AuthLoggedValidateSession.swift */; };
+		AB69F7A720EEED6400023A0E /* TouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB69F7A620EEED6400023A0E /* TouchID.swift */; };
+		AB69F7AA20EEF41F00023A0E /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB69F7A920EEF41F00023A0E /* home.storyboard */; };
 		AB90F60F20EA6267007A15BB /* AuthSignupStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */; };
 		AB90F61320EA64FC007A15BB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61220EA64FC007A15BB /* UIView+Extension.swift */; };
 		AB90F61520EA6557007A15BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61420EA6557007A15BB /* Constants.swift */; };
@@ -45,6 +49,10 @@
 		AB63D81C20E9090A00343EC0 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB63D81D20E909A000343EC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB63D81E20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageSecondViewController.swift; sourceTree = "<group>"; };
+		AB69F7A020EEB98200023A0E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		AB69F7A320EEE45A00023A0E /* AuthLoggedValidateSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoggedValidateSession.swift; sourceTree = "<group>"; };
+		AB69F7A620EEED6400023A0E /* TouchID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchID.swift; sourceTree = "<group>"; };
+		AB69F7A920EEF41F00023A0E /* home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
 		AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupStep1ViewController.swift; sourceTree = "<group>"; };
 		AB90F61220EA64FC007A15BB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AB90F61420EA6557007A15BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,9 +124,42 @@
 			path = pages;
 			sourceTree = "<group>";
 		};
+		AB69F79F20EEB97600023A0E /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				AB69F7A020EEB98200023A0E /* Alert.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		AB69F7A220EEE44200023A0E /* logged */ = {
+			isa = PBXGroup;
+			children = (
+				AB69F7A320EEE45A00023A0E /* AuthLoggedValidateSession.swift */,
+			);
+			path = logged;
+			sourceTree = "<group>";
+		};
+		AB69F7A520EEECE500023A0E /* touchId */ = {
+			isa = PBXGroup;
+			children = (
+				AB69F7A620EEED6400023A0E /* TouchID.swift */,
+			);
+			path = touchId;
+			sourceTree = "<group>";
+		};
+		AB69F7A820EEF3B900023A0E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				AB69F7A920EEF41F00023A0E /* home.storyboard */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
 		ABD373CB20E9A77700246CE1 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				AB69F7A220EEE44200023A0E /* logged */,
 				ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */,
 				AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */,
 				AB1BCFE920EAE3CD00356C1A /* AuthTouchIDViewController.swift */,
@@ -157,6 +198,8 @@
 		ABE4CA5620E66500005185C7 /* bnc10 */ = {
 			isa = PBXGroup;
 			children = (
+				AB69F7A520EEECE500023A0E /* touchId */,
+				AB69F79F20EEB97600023A0E /* ui */,
 				AB1A202920EC36ED00991510 /* services */,
 				AB1A202820EC36E000991510 /* utils */,
 				ABE4CA6920E66A44005185C7 /* scenes */,
@@ -176,6 +219,7 @@
 		ABE4CA6920E66A44005185C7 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				AB69F7A820EEF3B900023A0E /* home */,
 				ABD373CB20E9A77700246CE1 /* auth */,
 				ABDAE19A20E952E9008DB500 /* load */,
 				ABE4CA6C20E66A8F005185C7 /* onboarding */,
@@ -263,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE4CA6220E66502005185C7 /* LaunchScreen.storyboard in Resources */,
+				AB69F7AA20EEF41F00023A0E /* home.storyboard in Resources */,
 				AB63D81920E9090600343EC0 /* Localizable.strings in Resources */,
 				ABBAD44520EC1A890010B28B /* GoogleService-Info.plist in Resources */,
 				ABE4CA5F20E66502005185C7 /* Assets.xcassets in Resources */,
@@ -282,12 +327,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-bnc10/Pods-bnc10-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,10 +372,13 @@
 				ABD373CD20E9A7A900246CE1 /* AuthLoginSignupViewController.swift in Sources */,
 				AB90F61520EA6557007A15BB /* Constants.swift in Sources */,
 				ABDAE19920E9525A008DB500 /* OnboardingPageThirdViewController.swift in Sources */,
+				AB69F7A120EEB98200023A0E /* Alert.swift in Sources */,
+				AB69F7A720EEED6400023A0E /* TouchID.swift in Sources */,
 				ABE4CA6B20E66A8A005185C7 /* OnboardingPageViewController.swift in Sources */,
 				ABDAE19C20E95327008DB500 /* LoadViewController.swift in Sources */,
 				AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */,
 				ABE4CA5820E66500005185C7 /* AppDelegate.swift in Sources */,
+				AB69F7A420EEE45A00023A0E /* AuthLoggedValidateSession.swift in Sources */,
 				AB1A202B20EC382A00991510 /* Validator.swift in Sources */,
 				ABB36FB920EC2AD2001612C1 /* AuthLoginInitialViewController.swift in Sources */,
 				AB1BCFEC20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift in Sources */,

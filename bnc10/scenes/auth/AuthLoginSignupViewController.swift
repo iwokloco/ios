@@ -27,19 +27,22 @@ class AuthLoginSignupViewController: UIViewController {
     
 
     @IBAction func gotoLogin(_ sender: Any) {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authLoginInitialViewController") as? AuthLoginInitialViewController {
+        /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authLoginInitialViewController") as? AuthLoginInitialViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }
-        }
+        }*/
+        performSegue(withIdentifier: "segueLoginSignupToLogin", sender: nil)
+        
     }
     
     @IBAction func gotoSignup(_ sender: Any) {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authSignupStep1ViewController") as? AuthSignupStep1ViewController {
+        /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authSignupStep1ViewController") as? AuthSignupStep1ViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }
-        }
+        }*/
+        performSegue(withIdentifier: "segueLoginSignupToSignup", sender: nil)
     }
     
 }
