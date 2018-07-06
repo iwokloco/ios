@@ -25,6 +25,9 @@
 		ABB36FB920EC2AD2001612C1 /* AuthLoginInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36FB820EC2AD2001612C1 /* AuthLoginInitialViewController.swift */; };
 		ABBAD44520EC1A890010B28B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABBAD44420EC1A890010B28B /* GoogleService-Info.plist */; };
 		ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */; };
+		ABC672CF20EF99870041866F /* DBUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC672CE20EF99870041866F /* DBUserService.swift */; };
+		ABC672D220EF9D020041866F /* BNCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC672D120EF9D020041866F /* BNCUser.swift */; };
+		ABC672D520EFB3160041866F /* InitAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC672D420EFB3160041866F /* InitAppService.swift */; };
 		ABD373CD20E9A7A900246CE1 /* AuthLoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */; };
 		ABDAE19920E9525A008DB500 /* OnboardingPageThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE19820E9525A008DB500 /* OnboardingPageThirdViewController.swift */; };
 		ABDAE19C20E95327008DB500 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAE19B20E95327008DB500 /* LoadViewController.swift */; };
@@ -59,6 +62,9 @@
 		ABB36FB820EC2AD2001612C1 /* AuthLoginInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginInitialViewController.swift; sourceTree = "<group>"; };
 		ABBAD44420EC1A890010B28B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ABC0B73420E7006E000A1FCF /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		ABC672CE20EF99870041866F /* DBUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUserService.swift; sourceTree = "<group>"; };
+		ABC672D120EF9D020041866F /* BNCUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BNCUser.swift; sourceTree = "<group>"; };
+		ABC672D420EFB3160041866F /* InitAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitAppService.swift; sourceTree = "<group>"; };
 		ABD373CC20E9A7A900246CE1 /* AuthLoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginSignupViewController.swift; sourceTree = "<group>"; };
 		ABDAE19820E9525A008DB500 /* OnboardingPageThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageThirdViewController.swift; sourceTree = "<group>"; };
 		ABDAE19B20E95327008DB500 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +106,9 @@
 		AB1A202920EC36ED00991510 /* services */ = {
 			isa = PBXGroup;
 			children = (
+				ABC672D320EFB2DF0041866F /* local */,
 				AB1A202C20EC392B00991510 /* AuthService.swift */,
+				ABC672CE20EF99870041866F /* DBUserService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -156,6 +164,22 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		ABC672D020EF9CCA0041866F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ABC672D120EF9D020041866F /* BNCUser.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		ABC672D320EFB2DF0041866F /* local */ = {
+			isa = PBXGroup;
+			children = (
+				ABC672D420EFB3160041866F /* InitAppService.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
 		ABD373CB20E9A77700246CE1 /* auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +222,7 @@
 		ABE4CA5620E66500005185C7 /* bnc10 */ = {
 			isa = PBXGroup;
 			children = (
+				ABC672D020EF9CCA0041866F /* model */,
 				AB69F7A520EEECE500023A0E /* touchId */,
 				AB69F79F20EEB97600023A0E /* ui */,
 				AB1A202920EC36ED00991510 /* services */,
@@ -370,8 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD373CD20E9A7A900246CE1 /* AuthLoginSignupViewController.swift in Sources */,
+				ABC672D520EFB3160041866F /* InitAppService.swift in Sources */,
 				AB90F61520EA6557007A15BB /* Constants.swift in Sources */,
 				ABDAE19920E9525A008DB500 /* OnboardingPageThirdViewController.swift in Sources */,
+				ABC672D220EF9D020041866F /* BNCUser.swift in Sources */,
 				AB69F7A120EEB98200023A0E /* Alert.swift in Sources */,
 				AB69F7A720EEED6400023A0E /* TouchID.swift in Sources */,
 				ABE4CA6B20E66A8A005185C7 /* OnboardingPageViewController.swift in Sources */,
@@ -385,6 +412,7 @@
 				AB1BCFEA20EAE3CD00356C1A /* AuthTouchIDViewController.swift in Sources */,
 				AB90F60F20EA6267007A15BB /* AuthSignupStep1ViewController.swift in Sources */,
 				ABC0B73520E7006E000A1FCF /* OnboardingViewController.swift in Sources */,
+				ABC672CF20EF99870041866F /* DBUserService.swift in Sources */,
 				AB90F61320EA64FC007A15BB /* UIView+Extension.swift in Sources */,
 				AB63D81F20E92CBB00343EC0 /* OnboardingPageSecondViewController.swift in Sources */,
 				AB1A202D20EC392B00991510 /* AuthService.swift in Sources */,

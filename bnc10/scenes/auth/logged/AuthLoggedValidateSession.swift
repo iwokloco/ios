@@ -6,15 +6,11 @@ class AuthLoggedValidateSession: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
-    
 
     @IBAction func doLoginWithPin(_ sender: UIButton) {
         if (pinTextField.text?.count)! > 5 {
@@ -24,10 +20,7 @@ class AuthLoggedValidateSession: UIViewController {
                                 if authDataResult == nil {
                                     Alert.showAlert(title: "User error", message: "Se produjo un error durante el login", vc: self)
                                 } else {
-                                    //Alert.showAlert(title: "UID", message: authDataResult?.user.uid ?? "", vc: self)
-                                    let storyboard = UIStoryboard(name: "home", bundle: nil)
-                                    let controller = storyboard.instantiateViewController(withIdentifier: "home") as UIViewController
-                                    self.present(controller, animated: true, completion: nil)
+                                    self.performSegue(withIdentifier: "segueValidateSessionToHome", sender: nil)
                                 }
                             },
                            onError: { (error) -> () in
@@ -41,14 +34,14 @@ class AuthLoggedValidateSession: UIViewController {
     @IBAction func getTouchID(_ sender: UIButton) {
         TouchID.authenticationWithTouchID(
             onSuccess: { ()->() in
-                let storyboard = UIStoryboard(name: "home", bundle: nil)
-                let controller = storyboard.instantiateViewController(withIdentifier: "home") as UIViewController
-                self.present(controller, animated: true, completion: nil)
-        },
+                // solve performSegue delay in simulator after touchID
+                DispatchQueue.main.async() { () -> Void in
+                    self.performSegue(withIdentifier: "segueValidateSessionToHome", sender: nil)
+                }
+            },
             onError: { (error, msgError) -> () in
                 Alert.showAlert(title: "Error", message: msgError, vc: self)
-        }
-        )
+            })
     }
     
     @IBAction func doLogout(_ sender: UIButton) {

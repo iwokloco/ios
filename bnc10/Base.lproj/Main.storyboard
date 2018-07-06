@@ -692,11 +692,20 @@
                     </view>
                     <connections>
                         <outlet property="pinTextField" destination="ugG-CQ-u8Z" id="L6s-qf-bad"/>
+                        <segue destination="v0C-2u-PmX" kind="show" identifier="segueValidateSessionToHome" id="MUz-IT-ubd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fht-2r-8KZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="-791"/>
+        </scene>
+        <!--homeViewController-->
+        <scene sceneID="9Ed-jZ-tFT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="home" referencedIdentifier="homeViewController" id="v0C-2u-PmX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RxE-mf-Ewr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831" y="-1107"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zrp-jK-kWQ">
@@ -958,6 +967,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="cOn-NZ-3vT"/>
         <segue reference="Q5i-Ft-FE1"/>
-        <segue reference="8Gb-YM-xm4"/>
+        <segue reference="XsR-dT-Dyh"/>
     </inferredMetricsTieBreakers>
 </document>
