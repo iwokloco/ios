@@ -3,6 +3,12 @@ import LocalAuthentication
 
 class TouchID {
     
+    static func isEnabled() -> Bool {
+        let localAuthenticationContext = LAContext()
+        var authError: NSError?
+        return localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError)
+    }
+    
     static func authenticationWithTouchID(onSuccess: @escaping ()->(), onError: @escaping (_ errorCode: Int, _ errorMsg: String)->()) {
         let localAuthenticationContext = LAContext()
         localAuthenticationContext.localizedFallbackTitle = "Use Passcode"

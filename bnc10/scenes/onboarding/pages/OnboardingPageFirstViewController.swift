@@ -48,4 +48,5 @@ class OnboardingPageFirstViewController: UIViewController {
         pageViewController.setViewControllers([pageViewController.orderedViewControllers[1]], direction: .forward, animated: true, completion: nil)
         pageViewController.pageControl.currentPage = 1
     }
+    
 }

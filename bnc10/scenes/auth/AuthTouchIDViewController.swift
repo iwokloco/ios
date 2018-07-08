@@ -26,15 +26,19 @@ class AuthTouchIDViewController: UIViewController {
     }
     
     @IBAction func gotoBack(_ sender: UITapGestureRecognizer) {
-        _ = navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
-    func gotoNext() {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authSignupDNIFrontViewController") as? AuthSignupDNIFrontViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
-            }
+    @IBAction func skipThisStep(_ sender: UIButton) {
+        let user = AuthService.getSession()
+        if user != nil {
+            DBUserService.setFingerPrintEnabled(uid: user!.uid, fingerPrintEnabled: true, onSuccess: {
+                self.performSegue(withIdentifier: "segueSignupTouchIDToDNI", sender: nil)
+            }, onError: { (error) -> () in
+                Alert.showErrorAlert(error: error, vc: self)
+            })
+        } else {
+            Alert.showAlert(title: "Informació", message: "S'ha produït un error, prova més tard.", vc: self)
         }
     }
-    
 }

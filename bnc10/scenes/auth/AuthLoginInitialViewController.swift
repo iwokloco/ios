@@ -17,30 +17,26 @@ class AuthLoginInitialViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func doLogin(_ sender: UIButton) {
-        if Validator.isValidEmail(email: (emailTextField?.text)!) && (pinTextField.text?.count)! > 5 {
-            
+        let validEmail = Validator.isValidEmail(email: (emailTextField?.text)!)
+        let pinLength = (pinTextField.text?.count)! > 5
+        if validEmail && pinLength {
             AuthService.signIn(email: emailTextField.text!, password: pinTextField.text!,
                                onSuccess: {(authDataResult) -> () in
                                     if authDataResult == nil {
                                         Alert.showAlert(title: "User error", message: "Se produjo un error durante el login", vc: self)
                                     } else {
-                                        Alert.showAlert(title: "UID", message: authDataResult?.user.uid ?? "", vc: self)
+                                        self.performSegue(withIdentifier: "segueLoginInitialToHome", sender: nil)
                                     }
                                 },
                                onError: { (error) -> () in
                                     Alert.showErrorAlert(error: error, vc: self)
                                 })
-            
-            
-            /*AuthService.createUser(email: emailTextField.text!, password: pinTextField.text!,
-               onSuccess: {() -> () in
-                    print("success")
-                }, onError: { (error) -> () in
-                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.present(alertController, animated: true, completion: nil)
-                })*/
+        } else {
+            if !validEmail {
+                Alert.showAlert(title: "UID", message: "Introdueix un email vàlid.", vc: self)
+            } else if !pinLength {
+                Alert.showAlert(title: "UID", message: "El PIN ha de ser de 6 dígits.", vc: self)
+            }
         }
     }
     

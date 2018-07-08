@@ -1,11 +1,3 @@
-//
-//  AuthSignupDNIFrontViewController.swift
-//  bnc10
-//
-//  Created by Ramón HC on 3/7/18.
-//  Copyright © 2018 Ramón HC. All rights reserved.
-//
-
 import UIKit
 
 class AuthSignupDNIFrontViewController: UIViewController {
@@ -20,4 +12,13 @@ class AuthSignupDNIFrontViewController: UIViewController {
     
     }
     
+    // MARK: Actions
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func doRegistration(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueSignupDNIToStep2", sender: nil)
+    }
 }

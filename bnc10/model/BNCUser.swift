@@ -1,29 +1,10 @@
 import Foundation
 
-class BNCUser : NSObject {
+class BNCUser {
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("user")
-    
-    //MARK: Properties
-    var uid: String
-    var email: String
-    var pinCode: String?
-    var address: String?
-    var birthDate: String?
-    var fingerPrintEnabled: Bool?
-    var genre: String?
-    var hasAcceptedTermsAndConditions: Bool?
-    var hasRequestedCard: Bool?
-    var idNumber: String?
-    var kycOk: Bool?
-    var name: String?
-    var surname: String?
-    var nationality: String?
-    var phone: String?
-    var phoneVerified: Bool?
-    var wantNotifications: Bool?
     
     //MARK: Types
     struct PropertyKey {
@@ -46,12 +27,60 @@ class BNCUser : NSObject {
         static let wantNotifications = "wantNotifications"
     }
     
-    init?(uid: String, email: String) {
+    //MARK: Properties
+    var uid: String
+    var email: String
+    var pinCode: String?
+    var address: String?
+    var birthDate: String?
+    var fingerPrintEnabled: Bool?
+    var genre: String?
+    var hasAcceptedTermsAndConditions: Bool?
+    var hasRequestedCard: Bool?
+    var idNumber: String?
+    var kycOk: Bool?
+    var name: String?
+    var surname: String?
+    var nationality: String?
+    var phone: String?
+    var phoneVerified: Bool?
+    var wantNotifications: Bool?
+    
+    init?(uid: String,
+          email: String?,
+          pinCode: String?,
+          address: String?,
+          birthDate: String?,
+          fingerPrintEnabled: Bool?,
+          genre: String?,
+          hasAcceptedTermsAndConditions: Bool?,
+          hasRequestedCard: Bool?,
+          idNumber: String?,
+          kycOk: Bool?,
+          name: String?,
+          surname: String?,
+          nationality: String?,
+          phone: String?,
+          phoneVerified: Bool?,
+          wantNotifications: Bool?) {
+        
         self.uid = uid
-        self.email = email
+        self.email = email ?? ""
+        self.pinCode = pinCode ?? ""
+        self.address = address ?? ""
+        self.birthDate = birthDate ?? ""
+        self.fingerPrintEnabled = fingerPrintEnabled ?? false
+        self.genre = genre ?? ""
+        self.hasAcceptedTermsAndConditions = hasAcceptedTermsAndConditions ?? false
+        self.hasRequestedCard = hasRequestedCard ?? false
+        self.idNumber = idNumber ?? ""
+        self.kycOk = kycOk ?? false
+        self.name = name ?? ""
+        self.surname = surname ?? ""
+        self.nationality = nationality ?? ""
+        self.phone = phone ?? ""
+        self.phoneVerified = phoneVerified ?? false
+        self.wantNotifications = wantNotifications ?? true
     }
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        self.init(uid: "11111", email: "iwokloco@gmail.com")
-    }
 }

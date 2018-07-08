@@ -17,7 +17,6 @@ class AuthLoginSignupViewController: UIViewController {
         buttonLogin.setTitleColor(.white, for: .normal)
         buttonLogin.setTitle(NSLocalizedString("auth-login-signup-button-login", comment: ""), for: .normal)
         buttonSignup.setTitle(NSLocalizedString("auth-login-signup-button-crea-compte", comment: ""), for: .normal)
-        
         // buttonLogin.setGradientBackground(colorOne: Colors.darkBlue, colorTwo: Colors.lightBlue)
     }
     
@@ -26,23 +25,6 @@ class AuthLoginSignupViewController: UIViewController {
     }
     
 
-    @IBAction func gotoLogin(_ sender: Any) {
-        /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authLoginInitialViewController") as? AuthLoginInitialViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
-            }
-        }*/
-        performSegue(withIdentifier: "segueLoginSignupToLogin", sender: nil)
-        
-    }
-    
-    @IBAction func gotoSignup(_ sender: Any) {
-        /*if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "authSignupStep1ViewController") as? AuthSignupStep1ViewController {
-            if let navigator = navigationController {
-                navigator.pushViewController(viewController, animated: true)
-            }
-        }*/
-        performSegue(withIdentifier: "segueLoginSignupToSignup", sender: nil)
-    }
+
     
 }
