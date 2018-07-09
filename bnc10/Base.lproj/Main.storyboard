@@ -522,7 +522,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="top" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nKM-8N-1ec">
-                                <rect key="frame" x="20" y="90" width="335" height="221"/>
+                                <rect key="frame" x="20" y="90" width="335" height="191"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adreça" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9t-gF-MVI">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
@@ -542,24 +542,42 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view contentMode="TopLeft" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="61" translatesAutoresizingMaskIntoConstraints="NO" id="8UM-rf-IAK">
-                                        <rect key="frame" x="0.0" y="160" width="335" height="61"/>
+                                    <stackView autoresizesSubviews="NO" opaque="NO" contentMode="TopLeft" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-30-0tx">
+                                        <rect key="frame" x="0.0" y="160" width="335" height="31"/>
                                         <subviews>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-t3-0iO">
-                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
-                                            </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Accepto els termes i condicions del compte i la nostra política d'ús" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elt-ZA-zx5">
-                                                <rect key="frame" x="59" y="0.0" width="276" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OEP-jf-Tnx">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="31"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="TopLeft" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Uiy-9k-mcF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="QYX-UB-4CQ"/>
+                                                            <constraint firstAttribute="width" constant="50" id="vt2-LG-IF8"/>
+                                                        </constraints>
+                                                    </switch>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="JKe-n2-F3f"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="TopLeft" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1cR-Gi-9uE">
+                                                <rect key="frame" x="70" y="0.0" width="265" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accepto els termes i condicions." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elt-ZA-zx5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="31"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Elt-ZA-zx5" firstAttribute="leading" secondItem="1cR-Gi-9uE" secondAttribute="leading" id="cbq-j4-mfY"/>
+                                                    <constraint firstItem="Elt-ZA-zx5" firstAttribute="top" secondItem="1cR-Gi-9uE" secondAttribute="top" id="eFX-s8-eUW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Elt-ZA-zx5" secondAttribute="trailing" id="jRG-tB-j4g"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Elt-ZA-zx5" firstAttribute="leading" secondItem="C4v-t3-0iO" secondAttribute="trailing" constant="10" id="fd4-MU-Rqa"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-XI-wdE">
@@ -574,7 +592,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-fL-85H">
-                                <rect key="frame" x="144.5" y="596" width="86" height="41"/>
+                                <rect key="frame" x="145" y="596" width="86" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Registre"/>
                                 <connections>
@@ -597,7 +615,6 @@
                     <navigationItem key="navigationItem" id="2o6-cL-8Ug"/>
                     <connections>
                         <outlet property="addressTextField" destination="Y9t-gF-MVI" id="Ith-Xz-6La"/>
-                        <outlet property="conditionsSwitch" destination="C4v-t3-0iO" id="AtC-ZL-Quo"/>
                         <outlet property="countryTextField" destination="quP-40-fMw" id="SWz-SX-zKx"/>
                         <segue destination="v0C-2u-PmX" kind="show" identifier="segueSignupStep2ToHome" id="8p0-2b-mM4"/>
                     </connections>
@@ -641,8 +658,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="authSignupDNIImage" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-XB-4nX">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="authSignupDNIImage" translatesAutoresizingMaskIntoConstraints="NO" id="wnV-XB-4nX">
                                 <rect key="frame" x="40" y="231" width="295" height="154"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wnV-XB-4nX" secondAttribute="height" multiplier="295:154" id="UKg-VG-xrg"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UCQ-VH-0du" appends="YES" id="Oxw-7t-H20"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per a que puguis accedir al teu compte de manera ràpida i segura et demanem que accedeixis amb el teu TouchID." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uap-Iv-G6s">
                                 <rect key="frame" x="50" y="120" width="275" height="91"/>
@@ -657,9 +681,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="W03-V1-5jn"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1eL-si-6d6" appends="YES" id="zuy-FI-pcP"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lm-f9-U5Y">
                                 <rect key="frame" x="151" y="405" width="72" height="36"/>
@@ -691,18 +712,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="Cxb-18-787"/>
                     <connections>
+                        <outlet property="photoImageView" destination="wnV-XB-4nX" id="g19-di-z1e"/>
                         <segue destination="JUb-gQ-ZXe" kind="show" identifier="segueSignupDNIToStep2" id="BZM-V1-5Rp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4K-LW-aCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1eL-si-6d6" userLabel="tap gesture finger">
+                <tapGestureRecognizer id="UCQ-VH-0du">
                     <connections>
-                        <action selector="validateTouchID:" destination="Mw9-PE-IDH" id="W2A-wv-jRL"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="tAP-KX-nox" userLabel="tap gesture back">
-                    <connections>
-                        <action selector="gotoBack:" destination="Mw9-PE-IDH" id="8vr-kl-ztv"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="Mw9-PE-IDH" id="aLJ-Wc-Z0Y"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -1011,7 +1028,7 @@
         <image name="onboardingThirdPageImage" width="325" height="367"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UWh-Os-wVu"/>
+        <segue reference="8p0-2b-mM4"/>
         <segue reference="LYu-mf-RDR"/>
         <segue reference="Lzv-fP-OVM"/>
         <segue reference="XsR-dT-Dyh"/>
