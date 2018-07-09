@@ -17,7 +17,7 @@ class AuthTouchIDViewController: UIViewController {
     @IBAction func validateTouchID(_ sender: UITapGestureRecognizer) {
         TouchID.authenticationWithTouchID(
             onSuccess: { ()->() in
-                Alert.showAlert(title: "SUCCESS", message: "logrado", vc: self)
+                self.setFingerPrintEnabledToDB(enabled: true)
             },
             onError: { (error, msgError) -> () in
                 Alert.showAlert(title: "Error", message: msgError, vc: self)
@@ -30,9 +30,23 @@ class AuthTouchIDViewController: UIViewController {
     }
     
     @IBAction func skipThisStep(_ sender: UIButton) {
+        self.setFingerPrintEnabledToDB(enabled: false)
+        /*let user = AuthService.getSession()
+        if user != nil {
+            DBUserService.setFingerPrintEnabled(uid: user!.uid, fingerPrintEnabled: false, onSuccess: {
+                self.performSegue(withIdentifier: "segueSignupTouchIDToDNI", sender: nil)
+            }, onError: { (error) -> () in
+                Alert.showErrorAlert(error: error, vc: self)
+            })
+        } else {
+            Alert.showAlert(title: "Informació", message: "S'ha produït un error, prova més tard.", vc: self)
+        }*/
+    }
+    
+    private func setFingerPrintEnabledToDB(enabled: Bool) {
         let user = AuthService.getSession()
         if user != nil {
-            DBUserService.setFingerPrintEnabled(uid: user!.uid, fingerPrintEnabled: true, onSuccess: {
+            DBUserService.setFingerPrintEnabled(uid: user!.uid, fingerPrintEnabled: enabled, onSuccess: {
                 self.performSegue(withIdentifier: "segueSignupTouchIDToDNI", sender: nil)
             }, onError: { (error) -> () in
                 Alert.showErrorAlert(error: error, vc: self)

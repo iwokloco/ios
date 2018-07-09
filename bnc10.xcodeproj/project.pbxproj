@@ -22,6 +22,7 @@
 		AB90F60F20EA6267007A15BB /* AuthSignupStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */; };
 		AB90F61320EA64FC007A15BB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61220EA64FC007A15BB /* UIView+Extension.swift */; };
 		AB90F61520EA6557007A15BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB90F61420EA6557007A15BB /* Constants.swift */; };
+		ABA88FF620F2E2E300639A6A /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA88FF520F2E2E300639A6A /* StorageService.swift */; };
 		ABAED4A220F19C7500350919 /* AuthSignupStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAED4A120F19C7500350919 /* AuthSignupStep2ViewController.swift */; };
 		ABB36FB920EC2AD2001612C1 /* AuthLoginInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB36FB820EC2AD2001612C1 /* AuthLoginInitialViewController.swift */; };
 		ABBAD44520EC1A890010B28B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ABBAD44420EC1A890010B28B /* GoogleService-Info.plist */; };
@@ -60,6 +61,7 @@
 		AB90F60E20EA6267007A15BB /* AuthSignupStep1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupStep1ViewController.swift; sourceTree = "<group>"; };
 		AB90F61220EA64FC007A15BB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AB90F61420EA6557007A15BB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ABA88FF520F2E2E300639A6A /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		ABAED4A120F19C7500350919 /* AuthSignupStep2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSignupStep2ViewController.swift; sourceTree = "<group>"; };
 		ABB36FB820EC2AD2001612C1 /* AuthLoginInitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLoginInitialViewController.swift; sourceTree = "<group>"; };
 		ABBAD44420EC1A890010B28B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				ABC672D320EFB2DF0041866F /* local */,
 				AB1A202C20EC392B00991510 /* AuthService.swift */,
 				ABC672CE20EF99870041866F /* DBUserService.swift */,
+				ABA88FF520F2E2E300639A6A /* StorageService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				AB63D81620E8F38A00343EC0 /* OnboardingPageFirstViewController.swift in Sources */,
 				ABE4CA5820E66500005185C7 /* AppDelegate.swift in Sources */,
 				AB69F7A420EEE45A00023A0E /* AuthLoggedValidateSession.swift in Sources */,
+				ABA88FF620F2E2E300639A6A /* StorageService.swift in Sources */,
 				AB1A202B20EC382A00991510 /* Validator.swift in Sources */,
 				ABB36FB920EC2AD2001612C1 /* AuthLoginInitialViewController.swift in Sources */,
 				AB1BCFEC20EB05A100356C1A /* AuthSignupDNIFrontViewController.swift in Sources */,

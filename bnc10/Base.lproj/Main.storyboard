@@ -615,6 +615,7 @@
                     <navigationItem key="navigationItem" id="2o6-cL-8Ug"/>
                     <connections>
                         <outlet property="addressTextField" destination="Y9t-gF-MVI" id="Ith-Xz-6La"/>
+                        <outlet property="conditionsSwitch" destination="Uiy-9k-mcF" id="5g4-zA-PpQ"/>
                         <outlet property="countryTextField" destination="quP-40-fMw" id="SWz-SX-zKx"/>
                         <segue destination="v0C-2u-PmX" kind="show" identifier="segueSignupStep2ToHome" id="8p0-2b-mM4"/>
                     </connections>

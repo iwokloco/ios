@@ -6,7 +6,7 @@ class DBUserService {
     static func setNameSurnameEmailPincode(uid: String, name: String, surname: String, email: String, pinCode: String,
                                onSuccess: @escaping ()->(), onError: @escaping (_ error: Error)->()) {
         let db = Database.database().reference()
-        db.child("users").child(uid).updateChildValues(["name": name, "surname": surname, "email": email, "pinCode": pinCode]) { (error, ref) -> Void in
+        db.child("users").child(uid).updateChildValues(["name": name, "surname": surname, "email": email, "pinCode": pinCode, "completeRegistration": false]) { (error, ref) -> Void in
             if error == nil {
                 onSuccess()
             } else {

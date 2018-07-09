@@ -28,6 +28,7 @@ class AuthSignupDNIFrontViewController: UIViewController, UIImagePickerControlle
         }
         // Set photoImageView to display the selected image.
         photoImageView.image = selectedImage
+        StorageService.uploadImage(uid: (AuthService.getSession()?.uid)!, nameImg: "DNI_front", image: selectedImage)
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
     }
